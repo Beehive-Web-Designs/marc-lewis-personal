@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
-import Head from "next/head";
 import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
@@ -26,6 +25,28 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    title: "Dr. Marc Lewis",
+    description: "Leader in Applied Sport Science, Performance, and Human Resilience",
+    url: "https://drmarclewis.com",
+    siteName: "Dr. Marc Lewis",
+    images: [
+      {
+        url: "/images/all-images/marc-headshot-texans-main.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Marc Lewis",
+      }
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Marc Lewis",
+    description: "Leader in Applied Sport Science, Performance, and Human Resilience",
+    images: ["/images/all-images/marc-headshot-texans-main.jpeg"],
+  },
 };
 
 export default function RootLayout({
@@ -35,18 +56,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <meta property="og:url" content="https://drmarclewis.com"></meta>
-      <meta property="og:type" content="website"></meta>
-      <meta property="og:image" content="images/all-images/marc-headshot-texans-main.jpeg"></meta>
-
-      <meta name="twitter:card" content="summary_large_image"></meta>
-      <meta property="twitter:domain" content="drmarclewis.com"></meta>
-      <meta property="twitter:url" content="https://drmarclewis.com"></meta>
-      <meta name="twitter:image" content="images/all-images/marc-headshot-texans-main.jpeg"></meta>
-
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
