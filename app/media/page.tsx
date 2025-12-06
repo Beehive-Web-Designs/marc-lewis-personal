@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { Metadata } from "next";
-
+import { Podcast, Article, OtherMedia } from "@/interfaces/media-interfaces";
 import { ArticleCard, OtherMediaCard, PodcastCard } from "@/components/media-cards";
 
 export const metadata: Metadata = {
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function Media() {
-  const podcasts = [
+  const podcasts: Podcast[] = [
     {
       title: "Iron Culture Podcast",
       episode: "Ep 344 - Sports Science In Elite Athletics (ft. Dr. Marc Lewis)",
@@ -58,7 +57,14 @@ export default function Media() {
     },
   ];
 
-  const articles = [
+  const articles: Article[] = [
+    {
+      title: "Sport Science Handbook",
+      description: "Comprehensive guide for evidence-based decision-making in sport science.",
+      link: "https://www.amazon.com/dp/B0G238WXJD",
+      type: "book",
+      image: "/images/other-media/ssh-cover.jpg",
+    },
     {
       title: "Which tool or piece of equipment has provided you with the highest return on investment over the past 12 months?",
       publication: "Sportsmith",
@@ -82,14 +88,6 @@ export default function Media() {
       link: "https://www.sportsmith.co/articles/going-deep-into-gps-metrics-for-american-football/",
       type: "article",
       image: "/images/articles/sportsmith3.webp",
-    },
-    {
-      title: "Graduation is More Than A Degree For VA Tech Director of Sports Science",
-      publication: "The Roanoke Star",
-      description: "Dr. Lewis's journey and philosophy on education and professional development in human performance.",
-      link: "https://www.theroanokestar.com/2021/05/03/graduation-is-more-than-a-degree-for-va-tech-director-of-sports-science/",
-      type: "feature",
-      image: "/images/articles/graduation-is-more-than.jpg",
     },
     {
       title: "How to Maximize Concurrent Training",
@@ -133,14 +131,7 @@ export default function Media() {
     },
   ];
 
-  const otherMedia = [
-    {
-      title: "Sport Science Handbook",
-      description: "Comprehensive guide for evidence-based decision-making in sport science.",
-      link: "https://www.amazon.com/dp/B0G238WXJD",
-      image: "/images/other-media/ssh-cover.jpg",
-      type: "Resource",
-    },
+  const otherMedia: OtherMedia[] = [
     {
       title: "Sport Science Network",
       description: "Online hub for sport science resources and community.",

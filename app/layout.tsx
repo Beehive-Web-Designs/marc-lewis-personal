@@ -35,6 +35,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <meta property="og:url" content="https://drmarclewis.com"></meta>
+      <meta property="og:type" content="website"></meta>
+      <meta property="og:title" content="Home | Dr. Marc Lewis"></meta>
+      <meta property="og:description" content="Leader in Applied Sport Science, Performance, and Human Resilience"></meta>
+      <meta property="og:image" content="YOUR_IMAGE_URL_HERE"></meta>
+
+      <meta name="twitter:card" content="summary_large_image"></meta>
+      <meta property="twitter:domain" content="drmarclewis.com"></meta>
+      <meta property="twitter:url" content="https://drmarclewis.com"></meta>
+      <meta name="twitter:title" content="Home | Dr. Marc Lewis"></meta>
+      <meta name="twitter:description" content="Leader in Applied Sport Science, Performance, and Human Resilience"></meta>
+      <meta name="twitter:image" content="YOUR_IMAGE_URL_HERE"></meta>
+
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>

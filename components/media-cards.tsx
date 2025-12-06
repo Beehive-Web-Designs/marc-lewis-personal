@@ -1,4 +1,5 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Podcast, Article, OtherMedia } from "@/interfaces/media-interfaces";
 import { PodcastIcon } from "lucide-react";
 import Image from "next/image";
 
@@ -25,19 +26,6 @@ const SpotifyIcon = () => {
     />
   );
 };
-
-
-interface Podcast {
-  title: string;
-  episode: string;
-  description: string;
-  image: string;
-  links: {
-    platform: string;
-    url: string;
-    icon: string;
-  }[];
-}
 
 export function PodcastCard({ podcast }: { podcast: Podcast }) {
   return (
@@ -89,15 +77,6 @@ export function PodcastCard({ podcast }: { podcast: Podcast }) {
   )
 }
 
-interface Article {
-  title: string;
-  publication: string;
-  description: string;
-  link: string;
-  type: string;
-  image: string;
-}
-
 export const ArticleCard = ({ article }: { article: Article }) => {
   return (
     <div className="bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col">
@@ -121,20 +100,11 @@ export const ArticleCard = ({ article }: { article: Article }) => {
           rel="noopener noreferrer"
           className="inline-block text-primary font-medium hover:underline mt-auto"
         >
-          Read {article.type === "research" ? "Research" : article.type === "feature" ? "Feature" : "Article"} →
+          Read {article.type === "book" ? "Book" : article.type === "research" ? "Research" : article.type === "feature" ? "Feature" : "Article"} →
         </a>
       </div>
     </div>
   )
-}
-
-interface OtherMedia {
-  title: string;
-  description: string;
-  link: string;
-  image: string;
-  type: string;
-  date?: string;
 }
 
 export const OtherMediaCard = ({ otherMedia }: { otherMedia: OtherMedia }) => {

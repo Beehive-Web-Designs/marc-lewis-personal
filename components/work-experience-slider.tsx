@@ -4,54 +4,43 @@ import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/fadeInUp";
 
-const workExperience = [
+interface WorkExperience {
+  logo: string;
+  alt: string;
+}
+
+const workExperience: WorkExperience[] = [
   {
-    organization: "Sport Science Network",
     logo: "/images/companies/ssn-white.png",
     alt: "Sport Science Network logo",
-    role: "Founder & CEO"
   },
   {
-    organization: "Houston Texans",
     logo: "/images/companies/texans.png",
     alt: "Houston Texans logo",
-    role: "Sports Science Consultant"
   },
   {
-    organization: "Penn State University",
     logo: "/images/companies/penn-state.png",
     alt: "Penn State University logo",
-    role: "Associate Director of Applied Health and Performance Science"
   },
   {
-    organization: "Virginia Tech",
     logo: "/images/companies/virginia-tech.png",
     alt: "Virginia Tech logo",
-    role: "Director of Sport Science & Assistant Director of Strength and Conditioning"
   },
   {
-    organization: "U.S. Ski and Snowboard",
     logo: "/images/companies/us-ski-snowboard.png",
     alt: "U.S. Ski and Snowboard logo",
-    role: "Strength and Conditioning/Sport Physiology Fellow"
   },
   {
-    organization: "University of South Carolina",
     logo: "/images/companies/south-carolina.png",
     alt: "University of South Carolina logo",
-    role: "Graduate Assistant"
   },
   {
-    organization: "Wake Forest University",
     logo: "/images/companies/wake-forest.png",
     alt: "Wake Forest University logo",
-    role: "B.S. in Health and Exercise Science"
   },
   {
-    organization: "U.S. Army",
     logo: "/images/companies/geronimo.png",
     alt: "United States Army logo",
-    role: "Airborne Infantryman"
   }
 ];
 
@@ -63,7 +52,7 @@ export default function WorkExperienceSlider() {
           Proven Track Record Across Elite Teams & Institutions
         </h2>
         <Marquee speed={60} gradient={false} pauseOnHover={true}>
-          {workExperience.map((experience, index) => (
+          {workExperience.map((experience: WorkExperience, index: number) => (
             <div key={index} className="mx-8 flex items-center justify-center py-2 md:py-4">
               <img
                 src={experience.logo}
