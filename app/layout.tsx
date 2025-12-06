@@ -26,7 +26,10 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: "Dr. Marc Lewis",
+    title: {
+      default: "Dr. Marc Lewis",
+      template: "%s | Dr. Marc Lewis"
+    },
     description: "Leader in Applied Sport Science, Performance, and Human Resilience",
     url: "https://drmarclewis.com",
     siteName: "Dr. Marc Lewis",
