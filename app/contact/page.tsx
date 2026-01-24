@@ -3,7 +3,40 @@ import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Dr. Marc Lewis for consulting, speaking engagements, or collaboration opportunities.",
+  description: "Contact Dr. Marc Lewis, Director of Applied Sport Science for the Houston Texans, for consulting services, speaking engagements, workshops, or collaboration opportunities in sport science and human performance optimization.",
+  keywords: [
+    "contact Dr. Marc Lewis",
+    "sport science consulting contact",
+    "performance consulting inquiry",
+    "speaking engagement request",
+    "sport science workshop booking",
+    "NFL sport science consulting",
+    "athlete monitoring consulting",
+    "performance optimization services",
+    "collaboration opportunities",
+    "sport science expert contact"
+  ],
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: "Contact Dr. Marc Lewis | Sport Science Consulting & Speaking",
+    description: "Get in touch with Dr. Marc Lewis for consulting services, speaking engagements, workshops, or collaboration opportunities in sport science.",
+    url: "https://drmarclewis.com/contact",
+    images: [
+      {
+        url: "/images/all-images/marc-headshot-texans-main.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Dr. Marc Lewis",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Dr. Marc Lewis",
+    description: "Get in touch for consulting, speaking engagements, or collaboration opportunities in sport science.",
+  },
 };
 
 export default function Contact() {

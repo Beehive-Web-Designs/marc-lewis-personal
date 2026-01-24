@@ -4,7 +4,45 @@ import { ArticleCard, OtherMediaCard, PodcastCard } from "@/components/media-car
 
 export const metadata: Metadata = {
   title: "Media",
-  description: "Explore Dr. Marc Lewis's podcast interviews, research publications, and articles on human performance and optimization.",
+  description: "Explore Dr. Marc Lewis's podcast interviews, research publications, articles, and media appearances on human performance, athlete monitoring, NFL sport science, and performance optimization. Featured on Iron Culture, Science for Sport, and Strength Coach Network.",
+  keywords: [
+    "Dr. Marc Lewis podcast",
+    "sport science podcast",
+    "NFL sport science",
+    "athlete monitoring research",
+    "human performance articles",
+    "sport science publications",
+    "Iron Culture podcast",
+    "Science for Sport podcast",
+    "Strength Coach Network",
+    "sport science research",
+    "performance optimization articles",
+    "exercise physiology research",
+    "sport science handbook",
+    "GPS metrics football",
+    "training load monitoring"
+  ],
+  alternates: {
+    canonical: '/media',
+  },
+  openGraph: {
+    title: "Media & Insights | Dr. Marc Lewis Podcasts, Articles & Research",
+    description: "Explore Dr. Marc Lewis's podcast interviews, research publications, and articles on human performance, athlete monitoring, and NFL sport science.",
+    url: "https://drmarclewis.com/media",
+    images: [
+      {
+        url: "/images/all-images/marc-headshot-texans-main.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Marc Lewis - Media & Insights",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Media & Insights | Dr. Marc Lewis",
+    description: "Podcast interviews, research publications, and articles on human performance and NFL sport science.",
+  },
 };
 
 export default function Media() {

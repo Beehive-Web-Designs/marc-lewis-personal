@@ -17,20 +17,49 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://drmarclewis.com'),
   title: {
-    default: "Dr. Marc Lewis",
+    default: "Dr. Marc Lewis | Director of Applied Sport Science | Houston Texans",
     template: "%s | Dr. Marc Lewis"
   },
-  description: "Leader in Applied Sport Science, Performance, and Human Resilience",
+  description: "Dr. Marc Lewis is Director of Applied Sport Science for the Houston Texans, specializing in human performance optimization, athlete monitoring, and NFL sport science. Expert in applied sport science, strength and conditioning, and performance analytics with a PhD in exercise physiology.",
+  keywords: [
+    "sport science",
+    "applied sport science",
+    "human performance",
+    "athlete monitoring",
+    "NFL performance",
+    "Houston Texans",
+    "strength and conditioning",
+    "performance optimization",
+    "exercise physiology",
+    "sports performance",
+    "athlete monitoring systems",
+    "NFL sport science",
+    "performance analytics",
+    "sport science consulting",
+    "high performance training",
+    "athlete recovery",
+    "training load monitoring",
+    "GPS metrics",
+    "sport science expert",
+    "performance director"
+  ],
+  authors: [{ name: "Dr. Marc Lewis" }],
+  creator: "Dr. Marc Lewis",
+  publisher: "Dr. Marc Lewis",
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: {
-      default: "Dr. Marc Lewis",
+      default: "Dr. Marc Lewis | Director of Applied Sport Science | Houston Texans",
       template: "%s | Dr. Marc Lewis"
     },
-    description: "Leader in Applied Sport Science, Performance, and Human Resilience",
+    description: "Dr. Marc Lewis is Director of Applied Sport Science for the Houston Texans, specializing in human performance optimization, athlete monitoring, and NFL sport science.",
     url: "https://drmarclewis.com",
     siteName: "Dr. Marc Lewis",
     images: [
@@ -38,7 +67,7 @@ export const metadata: Metadata = {
         url: "/images/all-images/marc-headshot-texans-main.jpeg",
         width: 1200,
         height: 630,
-        alt: "Dr. Marc Lewis",
+        alt: "Dr. Marc Lewis - Director of Applied Sport Science for the Houston Texans",
       }
     ],
     locale: "en_US",
@@ -46,8 +75,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Marc Lewis",
-    description: "Leader in Applied Sport Science, Performance, and Human Resilience",
+    title: "Dr. Marc Lewis | Director of Applied Sport Science | Houston Texans",
+    description: "Director of Applied Sport Science for the Houston Texans. Expert in human performance optimization, athlete monitoring, and NFL sport science.",
     images: ["/images/all-images/marc-headshot-texans-main.jpeg"],
   },
 };
