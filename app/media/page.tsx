@@ -48,6 +48,15 @@ export const metadata: Metadata = {
 export default function Media() {
   const podcasts: Podcast[] = [
     {
+      title: "Universal Speed Rating",
+      episode: "Applied Sports Science Deep Dive with Marc Lewis, Director of Sports Science at Houston Texas",
+      description: "Les Spellman interviews Dr. Marc Lewis on applying sport science in elite performance.",
+      image: "/images/podcasts/applied-sport-science-deep-dive.jpg",
+      links: [
+        { platform: "YouTube", url: "https://www.youtube.com/watch?v=uiHZ2H1NKck", icon: "▶️" },
+      ],
+    },
+    {
       title: "Iron Culture Podcast",
       episode: "Ep 344 - Sports Science In Elite Athletics (ft. Dr. Marc Lewis)",
       description: "Dr. Lewis discusses sports science applications in elite athletics.",
