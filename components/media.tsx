@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { podcasts, articles, otherMedia } from "@/data/mediaData";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -9,32 +10,37 @@ import { PodcastCard, ArticleCard, OtherMediaCard } from "@/components/media-car
 
 export default function Media() {
   const mediaSamples = {
-    podcast: {
-      title: "Iron Culture Podcast",
-      episode: "Ep 344 - Sports Science In Elite Athletics (ft. Dr. Marc Lewis)",
-      description: "Dr. Lewis discusses human performance applications in elite athletics.",
-      image: "/images/podcasts/iron-culture.jpg",
-      links: [
-        { platform: "YouTube", url: "https://www.youtube.com/watch?v=IXd0-4jHfzs", icon: "▶️" },
-        { platform: "Spotify", url: "https://creators.spotify.com/pod/profile/massresearchreview/episodes/Ep-344---Sports-Science-In-Elite-Athletics-ft--Dr--Marc-Lewis-e37rej4", icon: "🎧" },
-      ],
-    },
-    article: {
-      title: "Which tool or piece of equipment has provided you with the highest return on investment over the past 12 months?",
-      publication: "Sportsmith",
-      description: "Expert insights on cost-effective equipment and tools for high-performance training environments.",
-      link: "https://www.sportsmith.co/articles/which-tool-or-piece-of-equipment-has-provided-you-with-the-highest-return-on-investment-over-the-past-12-months/",
-      type: "article",
-      image: "/images/articles/sportsmith1.webp",
-    },
-    otherMedia: {
-      title: "Sport Science Handbook",
-      description: "Comprehensive guide for evidence-based decision-making in sport science.",
-      link: "https://www.amazon.com/dp/B0G238WXJD",
-      image: "/images/other-media/ssh-cover.jpg",
-      type: "Resource",
-    },
-  }
+    podcast: podcasts[0],
+    article: articles[0],
+    otherMedia: otherMedia[0],
+  };
+  // const mediaSamples = {
+  //   podcast: {
+  //     title: "Iron Culture Podcast",
+  //     episode: "Ep 344 - Sports Science In Elite Athletics (ft. Dr. Marc Lewis)",
+  //     description: "Dr. Lewis discusses human performance applications in elite athletics.",
+  //     image: "/images/podcasts/iron-culture.jpg",
+  //     links: [
+  //       { platform: "YouTube", url: "https://www.youtube.com/watch?v=IXd0-4jHfzs", icon: "▶️" },
+  //       { platform: "Spotify", url: "https://creators.spotify.com/pod/profile/massresearchreview/episodes/Ep-344---Sports-Science-In-Elite-Athletics-ft--Dr--Marc-Lewis-e37rej4", icon: "🎧" },
+  //     ],
+  //   },
+  //   article: {
+  //     title: "Which tool or piece of equipment has provided you with the highest return on investment over the past 12 months?",
+  //     publication: "Sportsmith",
+  //     description: "Expert insights on cost-effective equipment and tools for high-performance training environments.",
+  //     link: "https://www.sportsmith.co/articles/which-tool-or-piece-of-equipment-has-provided-you-with-the-highest-return-on-investment-over-the-past-12-months/",
+  //     type: "article",
+  //     image: "/images/articles/sportsmith1.webp",
+  //   },
+  //   otherMedia: {
+  //     title: "Sport Science Handbook",
+  //     description: "Comprehensive guide for evidence-based decision-making in sport science.",
+  //     link: "https://www.amazon.com/dp/B0G238WXJD",
+  //     image: "/images/other-media/ssh-cover.jpg",
+  //     type: "Resource",
+  //   },
+  // }
   return (
     <>
       {/* Media Preview */}
