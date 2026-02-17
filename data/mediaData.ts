@@ -2,12 +2,22 @@ import { Podcast, Article, OtherMedia } from "@/interfaces/media-interfaces";
 
 export const podcasts: Podcast[] = [
   {
+    title: "The Physical Preparation Podcast",
+    episode: "Marc Lewis on Overcoming Adversity, Data-Driven Insights, and Enhancing Sports Science",
+    description: "Practical insights on applying sports science, from budget solutions to linking technology with athlete support.",
+    image: "/images/podcasts/physical-preparation-podcast.png",
+    links: [
+      { platform: "YouTube", url: "https://www.youtube.com/watch?v=d7OmHHxHhY4", icon: "▶️" },
+      { platform: "Robertson Training Systems", url: "https://robertsontrainingsystems.com/blog/marc-lewis-sports-science-podcast/", icon: "🎧" },
+    ]
+  },
+  {
     title: "Universal Speed Rating",
     episode: "Applied Sports Science Deep Dive with Marc Lewis, Director of Sports Science at Houston Texas",
     description: "Les Spellman interviews Dr. Marc Lewis on applying sport science in elite performance.",
     image: "/images/podcasts/applied-sport-science-deep-dive.jpg",
     links: [
-      { platform: "YouTube", url: "https://www.youtube.com/watch?v=uiHZ2H1NKck", icon: "▶️" },
+      { platform: "YouTube", url: "https://www.youtube.com/watch?v=-kkwMNDkGUo", icon: "▶️" },
     ],
   },
   {
