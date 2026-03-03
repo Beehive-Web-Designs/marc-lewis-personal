@@ -46,17 +46,10 @@ export const podcasts: Podcast[] = [
     image: "/images/podcasts/strength-coach-network.jpg",
     links: [
       { platform: "YouTube", url: "https://www.youtube.com/watch?v=d7OmHHxHhY4", icon: "▶️" },
-    ],
-  },
-  {
-    title: "Cheeky Mid Weeky",
-    episode: "Dr. Marc Lewis | Future of High Performance In Sport",
-    description: "Discussion on the evolving landscape of high-performance sport science.",
-    image: "/images/podcasts/cheeky-mid-weekly.jpg",
-    links: [
       { platform: "Poddtoppen", url: "https://poddtoppen.se/podcast/1688781157/cheeky-mid-weeky/dr-marc-lewis-future-of-high-performance-in-sport", icon: "▶️" },
     ],
   },
+
   {
     title: "Sportsmith",
     episode: "Maximising performance, managing fatigue and optimising recovery in American Football",
