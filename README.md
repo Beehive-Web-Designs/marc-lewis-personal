@@ -14,6 +14,7 @@ CONTACT_FORM_TO_EMAIL=
 ```
 
 Note: 
+- SECRETS_SCAN_OMIT_KEYS
 - `RESEND_API_KEY` can be obtained in step 2, make sure to set that here once you get it
 - `CONTACT_FORM_FROM_EMAIL` must use the verified domain. I would recommend: `noreply@drmarclewis.com`
 - `CONTACT_FORM_TO_EMAIL` is where form submissions go.
