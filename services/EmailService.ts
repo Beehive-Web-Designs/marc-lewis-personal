@@ -2,12 +2,15 @@ import { SendEmailRequest } from "@/requests/SendEmailRequest";
 import { ContactFormData } from "@/types/ContactFormData";
 
 export class EmailService {
-  public async sendContactFormEmail(contactFormData: ContactFormData): Promise<string> {
+  public async sendContactFormEmail(
+    contactFormData: ContactFormData,
+    company?: string
+  ): Promise<string> {
     try {
-      // create the send email request
       const sendEmailRequest = new SendEmailRequest(
         "Contact Form Submission",
-        contactFormData
+        contactFormData,
+        company
       );
 
       // send the email

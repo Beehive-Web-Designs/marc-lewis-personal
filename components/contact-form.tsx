@@ -31,6 +31,7 @@ export function ContactForm({
     phone_number: "",
     inquiry: "",
   });
+  const [company, setCompany] = useState("");
   const [errors, setErrors] = useState<{
     email?: string;
     phone_number?: string;
@@ -82,7 +83,10 @@ export function ContactForm({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+
+    if (company.trim()) {
+      return;
+    }
 
     const toastOptions = {
       position: "top-center" as const,
@@ -92,8 +96,7 @@ export function ContactForm({
     setIsLoading(true);
 
     try {
-      const response = await emailService.sendContactFormEmail(formData);
-      console.log(response);
+      await emailService.sendContactFormEmail(formData, company);
       toast.success("Email sent successfully! You'll be contacted shortly.", toastOptions);
     } catch (error) {
       toast.error("Failed to send email, please try again later.", {
@@ -114,6 +117,23 @@ export function ContactForm({
         <CardContent>
           <form onSubmit={handleSubmit}>
             <FieldGroup>
+              {/* Honeypot — hidden from users, bots often fill "company" fields */}
+              <div
+                className="absolute -left-[9999px] h-px w-px overflow-hidden"
+                aria-hidden="true"
+              >
+                <label htmlFor="company">Company</label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                />
+              </div>
+
               {/* Name */}
               <div className="flex flex-col md:flex-row gap-6">
                 <Field className="md:flex-1">
