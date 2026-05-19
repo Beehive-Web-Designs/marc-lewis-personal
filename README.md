@@ -9,7 +9,7 @@ Create `.env.local` and paste in the value I email
 
 Note: 
 - resend api key can be obtained in step 2, make sure to set that here once you get it
-- contact form from email must use the verified domain. I would recommend: `noreply@drmarclewis.com`
+- contact form from email must use the verified domain.
 - contacy form to email is where form submissions go.
 
 Then:
