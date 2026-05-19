@@ -5,12 +5,17 @@ Next.js site hosted on Netlify. Contact form email goes through Resend (`/api/se
 
 ## 1. Local development — env vars
 
-Create `.env.local` and paste in the value I email 
+Create `.env.local` and paste in the value I email you:
+```
+RESEND_API_KEY=
+CONTACT_FORM_FROM_EMAIL=
+CONTACT_FORM_TO_EMAIL=
+```
 
 Note: 
-- resend api key can be obtained in step 2, make sure to set that here once you get it
-- contact form from email must use the verified domain.
-- contacy form to email is where form submissions go.
+- `RESEND_API_KEY` can be obtained in step 2, make sure to set that here once you get it
+- `CONTACT_FORM_FROM_EMAIL` must use the verified domain.
+-  `CONTACT_FORM_TO_EMAIL` is where form submissions go.
 
 Then:
 
@@ -23,7 +28,7 @@ npm run dev
 
 1. Create an account at [resend.com](https://resend.com)
 2. Add and verify your sending domain (DNS records can be found in Marc's Square Space account)
-3. Create an API key and use it for resend api key
+3. Create an API key and use it for `RESEND_API_KEY`
 
 
 
