@@ -23,7 +23,7 @@ npm run dev
 
 1. Create an account at [resend.com](https://resend.com)
 2. Add and verify your sending domain (DNS records can be found in Marc's Square Space account)
-3. Create an API key and use it for `RESEND_API_KEY`
+3. Create an API key and use it for resend api key
 
 
 
